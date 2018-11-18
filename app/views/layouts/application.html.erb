@@ -10,6 +10,11 @@
   </head>
 
   <body>
+  <div class="navbar">
+  <%= link_to 'Главная страница', root_path%>
+  <%= link_to 'Поезда', trains_path %>
+  <%= link_to 'Станции', railway_stations_path%>
+  </div>
     <%= yield %>
   </body>
 </html>

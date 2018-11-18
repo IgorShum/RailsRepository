@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>Название станции:</strong>
   <%= @railway_station.title %>
 </p>
 
@@ -11,10 +11,12 @@
 <p>Станция входит в следующие маршруты:</p>
 <ul>
 	<% @railway_station.routes.each do |route| %>
+<td>
 <li><%= route.name %></li>
+</td>
 	<% end %>
 </ul>
 	<% end %>
 
-<%= link_to 'Редактироватьт', edit_railway_station_path(@railway_station) %> |
+<%= link_to 'Редактировать', edit_railway_station_path(@railway_station) %> |
 <%= link_to 'Назад к списку', railway_stations_path %>
