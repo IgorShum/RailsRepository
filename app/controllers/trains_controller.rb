@@ -57,7 +57,7 @@ end
 private
 
 def train_params
-	params.require(:train).permit(:number)	
+	params.require(:train).permit(:number, :current_station_id)	
 end
 
 end

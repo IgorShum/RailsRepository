@@ -1,11 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p><td><tr>
-  <strong>Номер:</strong>
-  <%= @train.number %></tr><tr>
   <strong>ID:</strong>
    <%= @train.id %></tr>
-</p>
+
+  <strong>Номер:</strong>
+  <%= @train.number %></tr></td></p>
+  <p>
+  <strong>На станции:</strong>
+  <% if @train.current_station.present? %>
+  <p><%= @train.current_station.title %></p>
+  <% else %>
+  <h3>Станция не указана</h3>
+  <% end %>
+
 
 <%= link_to 'Редактировать', edit_train_path(@train) %> |
 <%= link_to 'Назад к списку', trains_path %>
