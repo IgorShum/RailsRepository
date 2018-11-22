@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>ЖД Маршруты </h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Названия:</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @routes.each do |route| %>
+      <tr>
+        <td><%= route.name %></td>
+        <td><%= link_to 'Показ', route %></td>
+        <td><%= link_to 'Редакт', edit_route_path(route) %></td>
+        <td><%= link_to 'Удалить', route, method: :delete, data: { confirm: 'Удалить?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '+ Добавить станцию', new_route_path %>
