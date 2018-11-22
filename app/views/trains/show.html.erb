@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<p><td><tr>
   <strong>Номер:</strong>
-  <%= @train.number %>
+  <%= @train.number %></tr><tr>
+  <strong>ID:</strong>
+   <%= @train.id %></tr>
 </p>
 
 <%= link_to 'Редактировать', edit_train_path(@train) %> |
