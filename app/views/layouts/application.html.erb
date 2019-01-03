@@ -15,6 +15,14 @@
   <%= link_to 'Поезда', trains_path %>
   <%= link_to 'Станции', railway_stations_path%>
   </div>
+  <p id="notice" class="notice"><%= notice %></p>
+  <p id="alert" class="alert"><%= alert %></p>
+  <% if user_signed_in? %>
+  <%= link_to "Выйти", destroy_user_session_path, method: :delete %>
+  <% else %>
+  <% link_to "Войти", new_user_session_path %>
+  <% end %>
+
     <%= yield %>
   </body>
 </html>
