@@ -12,8 +12,8 @@
   <body>
   <div class="navbar">
   <%= link_to 'Главная страница', root_path%>
-  <%= link_to 'Поезда', trains_path %>
-  <%= link_to 'Станции', railway_stations_path%>
+  <%= link_to 'Поезда', admin_trains_path %>
+  <%= link_to 'Станции', admin_railway_stations_path%>
   <% if user_signed_in? %>
   <%= link_to "Выйти", destroy_user_session_path, method: :delete %>
   <p>Аккаунт: <%= current_user.email %></p>

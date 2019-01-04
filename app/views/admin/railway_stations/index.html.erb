@@ -20,9 +20,9 @@
         <% else %>
         Станция без маршрутов.
         <% end %>
-        <td><%= link_to 'Показ', railway_station %></td>
-        <td><%= link_to 'Редакт', edit_railway_station_path(railway_station) %></td>
-        <td><%= link_to 'Удалить', railway_station, method: :delete, data: { confirm: 'Удалить?' } %></td>
+        <td><%= link_to 'Показ', [:admin, railway_station] %></td>
+        <td><%= link_to 'Редакт', edit_admin_railway_station_path(railway_station) %></td>
+        <td><%= link_to 'Удалить', [:admin, railway_station] , method: :delete, data: { confirm: 'Удалить?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to '+ Добавить станцию', new_railway_station_path %>
+<%= link_to '+ Добавить станцию', new_admin_railway_station_path %>
