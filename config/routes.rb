@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  resources :tickets
-  devise_for :users
+	devise_for :users
+  get 'searches/new'
+  get 'searches/show'
+
+  resources :tickets, only: [:create, :show]
+  resources :search, only: [:show, :new, :edit]
   resources :railway_stations
   resources :trains
   resources :routes
