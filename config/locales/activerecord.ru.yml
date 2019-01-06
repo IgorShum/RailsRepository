@@ -11,6 +11,14 @@ ru:
       train:
         title: 'Название\номер поезда'
         number: 'Номер поезда'
-  new station: 'Создание новой станции'
-  new train: 'Создание нового поезда'
-  back: 'Назад'
+        current_station: 'Текущая станция'
+    errors:
+      messages:
+        blank: 'не может быть пустым!'
+      models:
+        railway_station:
+          attributes:
+            title:
+              blank: 'должно быть указано'
+              taken: 'уже существует!'
+

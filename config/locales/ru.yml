@@ -1,2 +1,15 @@
 ru:
   hello: 'Привет'
+  back: 'Назад'
+  show: 'Показать'
+  edit: 'Редактировать'
+  update: 'Обновить'
+  admin:
+    railway_stations:
+      form:
+        submit: '%{action} станцию'
+  new station: 'Создание новой станции'
+  new train: 'Создание нового поезда'
+
+  common:
+    errors: 'При заполнении формы возникли ошибки'

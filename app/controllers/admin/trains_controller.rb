@@ -28,7 +28,7 @@ end
 
 def update
 	if @train.update(train_params)
-		redirect_to @train
+		redirect_to [:admin, @train]
 	else
 		render :edit
 	end

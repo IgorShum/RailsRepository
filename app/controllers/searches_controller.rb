@@ -3,6 +3,7 @@ class SearchesController < ApplicationController
   end
 
   def show
+  	@stations = RailwayStation.all
   	
   end
 end

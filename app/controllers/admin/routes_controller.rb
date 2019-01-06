@@ -20,14 +20,14 @@ end
 def create
 	@route = Route.new(route_params)
  if @route.save
- 	redirect_to @route
+ 	redirect_to [:admin, @route]
 	else render :new
 	end
 end
 
 def update
 	if @route.update(route_params)
-		redirect_to @route
+		redirect_to [:admin, @route]
 	else
 		render :edit
 	end
@@ -37,18 +37,9 @@ def edit
 	
 end
 
-def create
-@route = Route.new(route_params)
-if @route.save
-	redirect_to @route
-else
-	render :new
-end
-end
-
 def destroy
 	if @route.destroy
-	redirect_to routes_path
+	redirect_to admin_routes_path
 	else
 	render :new
 	end	

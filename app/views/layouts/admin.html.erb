@@ -14,6 +14,13 @@
   <%= link_to 'Главная страница', root_path%>
   <%= link_to 'Поезда', admin_trains_path %>
   <%= link_to 'Станции', admin_railway_stations_path%>
+  <%= link_to 'Маршруты', admin_routes_path%>
+  <% if user_signed_in? %>
+  <%= link_to "Выйти", destroy_user_session_path, method: :delete %>
+  <p>Аккаунт: <%= current_user.email %></p>
+  <% else %>
+  <%= link_to "Войти", new_user_session_path %>
+  <% end %>
   </div>
   <p id="notice" class="notice"><%= notice %></p>
   <p id="alert" class="alert"><%= alert %></p>
