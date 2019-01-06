@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tutu - Администратор</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <div class="navbar">
+  <%= link_to 'Главная страница', root_path%>
+  <%= link_to 'Поезда', admin_trains_path %>
+  <%= link_to 'Станции', admin_railway_stations_path%>
+  </div>
+  <p id="notice" class="notice"><%= notice %></p>
+  <p id="alert" class="alert"><%= alert %></p>
+
+
+    <%= yield %>
+  </body>
+</html>

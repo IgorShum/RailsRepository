@@ -20,8 +20,9 @@ end
 def create
 	@train = Train.new(train_params)
  if @train.save
- 	redirect_to @train
-	else render :new
+ 	redirect_to admin_trains_path
+	else 
+		render :new
 	end
 end
 
@@ -37,18 +38,9 @@ def edit
 	
 end
 
-def create
-@train = Train.new(train_params)
-if @train.save
-	redirect_to @train
-else
-	render :new
-end
-end
-
 def destroy
 	if @train.destroy
-	redirect_to trains_path
+	redirect_to admin_trains_path
 	else
 	render :new
 	end	

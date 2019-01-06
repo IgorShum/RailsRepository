@@ -1,3 +1,3 @@
-<h1>Создать поезд</h1>
+<h1><%= t('new train') %></h1>
 <%= render 'form', resource: @train %>
-<%= link_to 'Back', railway_stations_path %>
+<%= link_to t('back'), admin_railway_stations_path %>

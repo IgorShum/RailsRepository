@@ -1,0 +1,16 @@
+ru:
+  activerecord:
+    models:
+      railway_station: 'Станция'
+      train: 'Поезд'
+      ticket: 'Билет'
+    attributes:
+      railway_station:
+        new station: 'Новая станция'
+        title: 'Название станции'
+      train:
+        title: 'Название\номер поезда'
+        number: 'Номер поезда'
+  new station: 'Создание новой станции'
+  new train: 'Создание нового поезда'
+  back: 'Назад'
